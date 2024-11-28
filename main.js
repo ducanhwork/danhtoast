@@ -1,3 +1,64 @@
+// Create a style element
+const style = document.createElement('style');
+style.textContent = `
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+    border-radius: 5px;
+    border-left: 4px solid;
+    min-width: 100px;
+    max-width: 400px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    z-index: 99999;
+}
+.toast + .toast {
+    margin-top: 24px;
+}
+.toast_icon,
+.toast_close {
+    padding: 0 16px;
+}
+.toast_icon {
+    font-size: 24px;
+}
+.toast--success > .toast_icon {
+    color: #4caf50;
+}
+.toast--warning > .toast_icon {
+    color: #e7c541;
+}
+.toast--success {
+    border-color: #4caf50;
+}
+.toast--warning {
+    border-color: #e7c541;
+}
+.toast_body {
+    flex-grow: 1;
+}
+.toast_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.toast_msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+.toast_close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+`;
+
+// Append the style element to the head
+document.head.appendChild(style);
+//JS Code
 function toast({ title = "", message = "", type = "info", duration = 3000 }) {
   const main = document.getElementById("toast");
   if (main) {
