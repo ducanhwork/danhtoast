@@ -98,9 +98,3 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
     main.appendChild(toast);
   }
 }
-toast({
-  title: "Warning",
-  message: "This is a warning toast message",
-  type: "warning",
-  duration: 3000,
-});
