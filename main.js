@@ -104,22 +104,3 @@ toast({
   type: "warning",
   duration: 3000,
 });
-const scs_btn = document.querySelector(".btn--success");
-scs_btn.addEventListener("click", () => {
-  toast({
-    title: "Success",
-    message: "This is a success toast message",
-    type: "success",
-    duration: 3000,
-  });
-});
-const wrn_btn = document.querySelector(".btn--warn");
-wrn_btn.addEventListener("click", () => {
-  toast({
-    title: "Warning",
-    message: "This is a warning toast message",
-    type: "warning",
-    duration: 3000,
-  });
-  console.log("sd", document.querySelector(".toast").style.animation);
-});
